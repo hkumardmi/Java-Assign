@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<title>Test Your Knowledge</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	</head>
+<body>
+<div>
+	<nav class="navbar navbar-light bg-light border border-dark rounded-lg m-3 p-1  position-stiky">
+  		<span class="navbar-brand mb-0 h1 ml-5"><b>Test Your Knowledge</b></span>
+	</nav>
+</div>
+
+<div class="border border-dark rounded-lg m-3" style="margin-top:100px;">
+	<div class="card m-3 p-2">
+	  	<div class="card-body">   	
+	    		<h5 class="card-text"><b>Question 1: </b>2+2=?</h5>    	
+	    		<div class="form-check-inline d-flex justify-content-around ">
+	    				<label class="form-check-label m-2" >
+	        			<input type="checkbox" class="form-check-input" id="11" value="4">4
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2">
+	        			<input type="checkbox" class="form-check-input" id="12" value="5">5
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2" >
+	        			<input type="checkbox" class="form-check-input" id="13" value="6">6
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2" >
+	        			<input type="checkbox" class="form-check-input" id="14" value="7">7
+	      				</label>
+				</div>
+		</div>
+	</div>
+
+	<div class="card m-3 p-2" >
+	  	<div class="card-body">   	
+	    		<h5 class="card-text"><b>Question 2: </b>2*2=?</h5>    	
+	    		<div class="form-check-inline d-flex justify-content-around ">
+	    				<label class="form-check-label m-2" >
+	        			<input type="checkbox" class="form-check-input" id="21"  value="4">4
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2">
+	        			<input type="checkbox" class="form-check-input" id="22" value="5">5
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2">
+	        			<input type="checkbox" class="form-check-input" id="23" value="6">6
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2" >
+	        			<input type="checkbox" class="form-check-input" id="24" value="7">7
+	      				</label>
+				</div>
+		</div>
+	</div>
+
+
+	<div class="card m-3 p-2" >
+	  	<div class="card-body">   	
+	    		<h5 class="card-text"><b>Question 3: </b>3+3=?</h5>    	
+	    		<div class="form-check-inline d-flex justify-content-around">
+	    				<label class="form-check-label m-2">
+	        			<input type="checkbox" class="form-check-input" id="31" value="3">3
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2" >
+	        			<input type="checkbox" class="form-check-input" id="32" value="33">33
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2">
+	        			<input type="checkbox" class="form-check-input" id="33" value="6">6
+	      				</label>
+	      				
+	      				<label class="form-check-label m-2">
+	        			<input type="checkbox" class="form-check-input" id="34" value="9">9
+	      				</label>
+				</div>
+		</div>
+	</div>
+
+	<div class="border border-dark rounded-lg m-3 p-2">
+		<button type="button" class="btn btn-primary" onclick="show(); ">Submit Answer</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function show(){
+		var obj = document.getElementsByClassName("form-check-inline d-flex justify-content-around");
+		var array=[];
+		for(i=1;i<=obj.length;i++)
+		{
+			for(j=1;j<=4;j++)
+			{
+				var n = i.toString() + j.toString();
+				var n = n.toString();
+				
+				var get = document.getElementById(n);
+				if (get.checked == true){
+					var ab = document.getElementById(n).value;
+					// console.log(ab);
+					array.push(ab);	
+				}
+			}
+			console.log(i+"=>  "+array);
+			var array = [];
+		}
+	}
+</script>
+</body>
+</HTML>
